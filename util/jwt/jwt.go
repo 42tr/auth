@@ -55,9 +55,9 @@ func Set(c *gin.Context, uid uint) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	c.SetCookie(config.HEADER, tokenString, 7*24*60*60, "/", "", false, true)
+	c.SetCookie(config.HEADER, tokenString, 7*24*60*60, "/", config.DOMAIN, false, true)
 }
 
 func Exp(c *gin.Context) {
-	c.SetCookie(config.HEADER, "", 0, "/", "", false, true)
+	c.SetCookie(config.HEADER, "", 0, "/", config.DOMAIN, false, true)
 }

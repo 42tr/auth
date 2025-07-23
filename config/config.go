@@ -10,6 +10,7 @@ var REGISTRATION_CODE string
 var DEFAULT_PASSWORD string
 var SECRETKEY string
 var HEADER string
+var DOMAIN string
 
 func init() {
 	err := godotenv.Load()
@@ -31,5 +32,9 @@ func init() {
 	HEADER = os.Getenv("HEADER")
 	if HEADER == "" {
 		panic("HEADER is not set")
+	}
+	DOMAIN = os.Getenv("DOMAIN")
+	if DOMAIN == "" {
+		panic("DOMAIN is not set")
 	}
 }

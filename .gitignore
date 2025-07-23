@@ -17,3 +17,5 @@
 data
 tmp
 .env
+
+auth
